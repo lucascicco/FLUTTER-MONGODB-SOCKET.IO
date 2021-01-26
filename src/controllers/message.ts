@@ -5,6 +5,12 @@ class MessageController {
     async fetchMessage(req: Request , res:  Response) {   
         const {sender, receiver} = req.body;
         
+        if(req.userId !== sender){
+            return res.status(400).json({
+                message: 'You are not allowed to get the messages'
+            });
+        }
+
         await Message.find({_id : sender}, {
            users: {
              $elemMatch: {_id : receiver}

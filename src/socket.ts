@@ -8,6 +8,8 @@ var connectedUsers: any[] = [];
 sio.on('connection', socket => {
 
     socket.on('chatID', (data) => {
+        console.log(data);
+
         let chatID = data.id;
 
         socket.join(chatID);
@@ -32,6 +34,7 @@ sio.on('connection', socket => {
 
 
         socket.on('send_message', message => {
+            console.log(message);
 
             const receiverChatID = message.receiverChatID
             const senderChatID = message.senderChatID
@@ -55,7 +58,7 @@ sio.on('connection', socket => {
 });
 
 function saveMessage(content: string, sender: string, receiver: string, isMy: boolean ,isImage = false) {
-
+    
     var message = new Message({
         _id: sender,
         users: [{
@@ -68,7 +71,7 @@ function saveMessage(content: string, sender: string, receiver: string, isMy: bo
         }
         ]
     });
-
+    
     Message.findOne({_id : sender},(err: any, doc: any)=>{ 
 
         if(!doc){

@@ -79,13 +79,13 @@ class UserController {
     // Generate JWT
     const userJwt = jwt.sign(
       {
-        id: existingUser.id,
+        id: existingUser._id,
       },
       process.env.APP_SECRET!, {
         expiresIn: process.env.EXPIRES_DATE!
       }
     );
-
+    
     res.status(200).send({
       message: passwordsMatch,
       token: userJwt
@@ -94,7 +94,16 @@ class UserController {
 
   async getInfo(req: Request , res:  Response) {
     const user = await User.findById(req.userId);
-    
+
+    console.log(req.userId);
+    console.log(user);
+
+    if(!user){
+      return res.status(400).json({
+        message: 'Usuário não encontrado.'
+      })
+    }
+
     const { _id , name, sex, email, about, url } = user;
 
     return res.status(200).send({
@@ -119,10 +128,18 @@ class UserController {
         }
       }
     ], (err: any, docs: any) => {
-      docs.forEach((e: { password: any; __v: any; path: string; url: string;}) => {
+      docs.forEach((e: { 
+          path: any;
+          image_name: any; 
+          password: any;
+          __v: any; 
+          url: string; 
+        }) => {
+        delete e.image_name
         delete e.password
         delete e.__v
         e.url = `${process.env.APP_URL}/files/${e.path}`
+        delete e.path
       });
 
       return res.status(200).send(docs);

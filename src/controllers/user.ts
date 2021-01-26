@@ -95,9 +95,6 @@ class UserController {
   async getInfo(req: Request , res:  Response) {
     const user = await User.findById(req.userId);
 
-    console.log(req.userId);
-    console.log(user);
-
     if(!user){
       return res.status(400).json({
         message: 'Usuário não encontrado.'

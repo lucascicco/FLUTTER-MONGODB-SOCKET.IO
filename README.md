@@ -1,5 +1,6 @@
 # TALKYAPP-MONGODB-SOCKET.IO
 
+
 Back-end criado em Node.js usando TypeScript para desenvolver o código. Esse back-end contém diversos processos, como rotas com o **express**, autenticação com o middleware configurado com o **jsonwebtoken**, conexão com o banco de dados e criação dos schemas pelo **mongoose**, password hashing com **crypto** para evitar captura da real senha e o **socket.io** usado para permitir conexão em tempo real dentro do server back-end e externamente com o front-end. 
 
 Também, há o uso do  **multer** com o **crypto** para salvar uma imagem no banco de dados, **multer.diskStorage** para salvar num diretório específico e o crypo para gerar um filename, garantindo a segurança do arquivo.
@@ -32,6 +33,11 @@ Each "message" saved in the database, is saved with the **_ id** of the user, an
 
 <hr/>
 
+### FRONT-END MOBILE APP:
+
+[TALKYAPP-CHAT-APP-SOCKET.IO](https://github.com/lucascicco/TALKYAPP-CHAT-APP-SOCKET.IO)
+
+
 ## HOW TO RUN THE CODE? COMO RODAR O CÓDIGO ?
 
 Baixe o código e rode esse comando no terminal:
@@ -63,5 +69,6 @@ Developed by,
 Desenvolvido por,
 
 lucascicco.
+
 
 

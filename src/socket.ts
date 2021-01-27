@@ -8,7 +8,6 @@ var connectedUsers: any[] = [];
 sio.on('connection', socket => {
 
     socket.on('chatID', (data) => {
-        console.log(data);
 
         let chatID = data.id;
 
@@ -34,8 +33,7 @@ sio.on('connection', socket => {
 
 
         socket.on('send_message', message => {
-            console.log(message);
-
+            
             const receiverChatID = message.receiverChatID
             const senderChatID = message.senderChatID
             const content = message.content

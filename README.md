@@ -28,4 +28,30 @@ Each "message" saved in the database, is saved with the **_ id** of the user, an
 
 <hr/>
 
+## HOW TO RUN THE CODE? COMO RODAR O CÓDIGO ?
+
+Baixe o código e rode esse comando no terminal:
+
+Download the repository and run on terminal:
+
+```
+yarn dev
+```
+
+## WHAT I USED TO DEVELOP? O QUE EU USEI PARA DESENVOLVER?
+
+- express
+- express-validator
+- helmet
+- mongoose
+- mongodb
+- nodemon
+- socket.io
+- jsonwebtoken
+- dotenv
+- cors
+- multer
+
+
+
 

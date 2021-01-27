@@ -1,6 +1,6 @@
 # TALKYAPP-MONGODB-SOCKET.IO
 
-Back-end criado em Node.js usando TypeScript para desenvolver o código. Esse back-end contém diversos processos, como rotas com o express, autenticação com o middleware configurado com o jwt, conexão com o banco de dados e criação dos schemas pelo mongoose, password hashing para evitar captura da real senha e o socket.io usado para permitir conexão em tempo real dentro do server back-end e externamente com o front-end. 
+Back-end criado em Node.js usando TypeScript para desenvolver o código. Esse back-end contém diversos processos, como rotas com o **express**, autenticação com o middleware configurado com o **jsonwebtoken**, conexão com o banco de dados e criação dos schemas pelo **mongoose**, password hashing com **crypto** para evitar captura da real senha e o **socket.io** usado para permitir conexão em tempo real dentro do server back-end e externamente com o front-end. 
 
 A aplicação possui apenas dois schemas:
 - User
@@ -14,7 +14,7 @@ Cada "message" salva no banco de dados, é salva com o **_id** do usuário, e os
 
 <hr/>
 
-Back-end created in Node.js using TypeScript to develop the code. This backend contains several processes, such as routes with express, authentication with middleware configured with jwt, connection to the database and creation of schemas by mongoose, password hashing to avoid capturing the real password and the socket.io used to allow connection in real time inside the back-end server and externally with the front-end.
+Back-end created in Node.js using TypeScript to develop the code. This backend contains several processes, such as routes with **express**, authentication with middleware configured with **jsonwebtoken**, connection to the database and creation of schemas by **mongoose**, password hashing with **crypto** to avoid capturing the real password and the **socket.io** used to allow connection in real time inside the back-end server and externally with the front-end.
 
 The application has only two schemas:
 - User
@@ -27,4 +27,5 @@ The application has only two schemas:
 Each "message" saved in the database, is saved with the **_ id** of the user, and the **users**, separately has the messages previously had with a certain type of user. 
 
 <hr/>
+
 

@@ -2,6 +2,8 @@
 
 Back-end criado em Node.js usando TypeScript para desenvolver o código. Esse back-end contém diversos processos, como rotas com o **express**, autenticação com o middleware configurado com o **jsonwebtoken**, conexão com o banco de dados e criação dos schemas pelo **mongoose**, password hashing com **crypto** para evitar captura da real senha e o **socket.io** usado para permitir conexão em tempo real dentro do server back-end e externamente com o front-end. 
 
+Também, há o uso do  **multer** com o **crypto** para salvar uma imagem no banco de dados, **multer.diskStorage** para salvar num diretório específico e o crypo para gerar um filename, garantindo a segurança do arquivo.
+
 A aplicação possui apenas dois schemas:
 - User
 - Message
@@ -15,6 +17,8 @@ Cada "message" salva no banco de dados, é salva com o **_id** do usuário, e os
 <hr/>
 
 Back-end created in Node.js using TypeScript to develop the code. This backend contains several processes, such as routes with **express**, authentication with middleware configured with **jsonwebtoken**, connection to the database and creation of schemas by **mongoose**, password hashing with **crypto** to avoid capturing the real password and the **socket.io** used to allow connection in real time inside the back-end server and externally with the front-end.
+
+Also, there is the use of **multer** with **crypto** to save an image in the database, **multer.diskStorage** to save to a specific directory and crypo to generate a filename, guaranteeing security of the file.
 
 The application has only two schemas:
 - User
@@ -52,6 +56,12 @@ yarn dev
 - cors
 - multer
 
+<hr/>
 
+Developed by,
+
+Desenvolvido por,
+
+lucascicco.
 
 
